@@ -71,6 +71,7 @@ blocks:
         - name: Docker build
           commands:
             # Replace with your GCP Project ID
-            - cd ../application
+            - ls
+            - cd application
             - docker build -t "gcr.io/advance-age-269909/cloud-run-test:${SEMAPHORE_GIT_SHA:0:7}" .
             - docker push "gcr.io/advance-age-269909/cloud-run-test:${SEMAPHORE_GIT_SHA:0:7}"
