@@ -69,6 +69,7 @@ blocks:
           - checkout
       jobs:
         - name: Docker build
+          files: [./application/Dockerfile]
           commands:
             # Replace with your GCP Project ID
             - docker build -t "gcr.io/advance-age-269909/cloud-run-test:${SEMAPHORE_GIT_SHA:0:7}" .
