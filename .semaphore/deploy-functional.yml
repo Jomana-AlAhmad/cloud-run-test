@@ -16,7 +16,8 @@ blocks:
             - gcloud auth configure-docker -q
             - gcloud run deploy cloud-run-test-ft --project advance-age-269909 --image gcr.io/advance-age-269909/cloud-run-test:${SEMAPHORE_GIT_SHA:0:7} --region europe-west4 --platform managed
   - name: ft
-      task:
+    dependencies: ["Deploy to stubbed functional"]
+    task:
         jobs:
           - name: run fts
             commands:
