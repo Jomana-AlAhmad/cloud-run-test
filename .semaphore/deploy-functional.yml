@@ -17,7 +17,7 @@ blocks:
             # Deploy to Cloud Run, using flags to avoid interactive prompt:
             - gcloud run deploy cloud-run-test --project advance-age-269909 --image gcr.io/advance-age-269909/cloud-run-test:${SEMAPHORE_GIT_SHA:0:7} --region europe-west4 --platform managed
   - name: ft
-      dependencies: ["Deploy to production"]
+      dependencies: ["Deploy to stubbed functional"]
       task:
         jobs:
           - name: run fts
