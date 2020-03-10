@@ -19,6 +19,9 @@ blocks:
   - name: ft
     dependencies: ["Deploy to stubbed functional"]
     task:
+        prologue:
+         commands:
+            - checkout
         jobs:
           - name: run fts
             commands:
