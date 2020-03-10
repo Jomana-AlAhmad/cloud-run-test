@@ -22,5 +22,6 @@ blocks:
         jobs:
           - name: run fts
             commands:
+              - ls
               - cd cucumber-tests
               - mvn verify -Dcucumber.options="--strict --tags @ft --plugin pretty classpath:features"
