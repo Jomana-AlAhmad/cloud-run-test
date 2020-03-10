@@ -6,6 +6,7 @@ agent:
     os_image: ubuntu1804
 blocks:
   - name: Deploy to stubbed functional
+    dependencies: []
     task:
       secrets:
         - name: GCP
