@@ -19,6 +19,7 @@
 FROM adoptopenjdk/openjdk8:jdk8u202-b08-alpine-slim
 
 # Copy the jar to the production image from the builder stage.
+RUN ls
 COPY application/build/libs/helloworld.jar /helloworld.jar
 
 # Run the web service on container startup.
