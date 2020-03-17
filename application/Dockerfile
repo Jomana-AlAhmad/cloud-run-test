@@ -11,9 +11,11 @@ RUN ls
 COPY application /application
 WORKDIR /application
 RUN ls
+RUN ../gradlew build || return 0
 COPY . .
 RUN ../gradlew build
-
+RUN ls
+RUN pwd
 # Use AdoptOpenJDK for base image.
 # It's important to use OpenJDK 8u191 or above that has container support enabled.
 # https://hub.docker.com/r/adoptopenjdk/openjdk8
