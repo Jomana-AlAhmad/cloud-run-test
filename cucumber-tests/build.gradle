@@ -15,4 +15,9 @@ dependencies {
     compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.5'
 
 }
+task localFunctionalTests(type: JavaExec) {
+    main = "io.cucumber.core.cli.Main"
+    classpath = project.sourceSets.test.runtimeClasspath
+    args = ['--strict','--plugin', 'pretty', '--glue','com.example.helloworld', 'classpath:features']
 
+}
