@@ -3,9 +3,10 @@ steps:
     id: 'buildJar'
     args: ['build']
     dir: 'application'
-#  - name: 'gcr.io/cloud-builders/gradle'
-#      id: 'release'
-#      args: ['release']
+  - name: 'gcr.io/cloud-builders/gradle'
+    id: 'release'
+    args: ['release']
+    dir: 'application'
   - name: 'gcr.io/cloud-builders/docker'
     id: 'build'
     args: ['build', '-t', 'gcr.io/development-271408/cloud-run-test:$SHORT_SHA', '.' ]
