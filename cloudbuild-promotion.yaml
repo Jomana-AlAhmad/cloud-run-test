@@ -1,8 +1,8 @@
 steps:
   - name: 'gcr.io/cloud-builders/gradle'
-      id: 'buildJar'
-      args: ['build']
-      dir: 'application'
+    id: 'buildJar'
+    args: ['build']
+    dir: 'application'
 #  - name: 'gcr.io/cloud-builders/gradle'
 #      id: 'release'
 #      args: ['release']
