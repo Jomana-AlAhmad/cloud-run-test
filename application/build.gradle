@@ -53,7 +53,7 @@ springBoot {
 }
 
 def commonJarConfigClosure = {
-    archiveName = "helloworld.jar"
+    archiveName = "${project.name}.jar"
 }
 
 bootJar commonJarConfigClosure
